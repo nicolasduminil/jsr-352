@@ -1,0 +1,18 @@
+<glassfish-web-app>
+  <property name="default-role-mapping" value="true">
+    <description>Enable default group to role mapping</description>
+  </property>
+  <security-role-mapping>
+    <role-name>admin-role</role-name>
+    <group-name>admin-role</group-name>
+  </security-role-mapping>
+  <security-role-mapping>
+    <role-name>user-role</role-name>
+    <group-name>user-role</group-name>
+  </security-role-mapping>
+  <security-role-mapping>
+    <role-name>kaz</role-name>
+    <group-name>kaz</group-name>
+  </security-role-mapping>
+  <parameter-encoding default-charset="UTF-8"/>
+</glassfish-web-app>

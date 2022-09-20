@@ -15,8 +15,7 @@ public class FormAuthServlet extends HttpServlet
 {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws
-    ServletException, IOException
+    throws IOException
   {
     PrintWriter printWriter = response.getWriter();
     printWriter.append("This is a secured servlet\n");

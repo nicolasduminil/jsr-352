@@ -1,0 +1,156 @@
+version: 1
+
+dn: dc=payara,dc=fish
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+dc: payara
+o: Simplex Software
+
+dn: ou=groups,dc=payara,dc=fish
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: ou=people,dc=payara,dc=fish
+objectclass: organizationalUnit
+objectclass: top
+ou: people
+
+dn: uid=robert smith,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Robert Smith
+sn: Smith
+uid: rsmith
+userPassword: pasword123
+carlicense: HISCAR 123
+homephone: 555-111-2222
+mail: r.smith@payara.fr
+description: Senior Engineer
+ou: Software Development
+
+dn: uid=nicolas duminil,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Nicolas Duminil
+sn: Duminil
+uid: nduminil
+userPassword: pasword123
+carlicense: ORWEL 962045IS9RO
+homephone: 217-465-9782
+mail: n.duminil@payara.fr
+description: Senior Architect
+ou: Software Developpment
+
+dn: uid=linda devine,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Linda Devine
+sn: Devine
+uid: ldevine
+userPassword: pasword123
+carlicense: BELL 9955041TO9EB
+homephone: 989-690-9804
+mail: l.devine@payara.fr
+description: CTO
+ou: Software Developpment
+
+dn: uid=gavin kim,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Gavin Kim
+sn: Kim
+uid: gkim
+userPassword: pasword123
+carlicense: STEER 609176YA9TS
+homephone: 831-998-5102
+mail: g.kim@payara.fr
+description: DBA
+ou: Software Developpment
+
+dn: uid=leroy franklin,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Leroy Franklin
+sn: Franklin
+uid: lfranklin
+userPassword: pasword123
+carlicense: JACKS 054112AN9AJ
+homephone: 303-233-8699
+mail: l.franklin@payara.fr
+description: Network admin
+ou: Software Developpment
+
+dn: uid=norman finch,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Norman Finch
+sn: Finch
+uid: nfinch
+userPassword: pasword123
+carlicense: GARLA 611057QU9AG
+homephone: 619-568-2688
+mail: n.finch@payara.fr
+description: Security Officer
+ou: Software Developpment
+
+dn: uid=carlyn posey,ou=people,dc=payara,dc=fish
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Carlin Posey
+sn: Posey
+uid: cposey
+userPassword: pasword123
+carlicense: LAVEY 051031OL9AL
+homephone: 718-477-0054
+mail: c.posey@payara.fr
+description: Data Controller
+ou: Software Developpment
+
+dn: cn=admin,ou=groups,dc=payara,dc=fish
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: admin
+uniqueMember: uid=nicolas duminil,ou=people,dc=payara,dc=fish
+uniqueMember: uid=gavin kim,ou=people,dc=payara,dc=fish
+ou: user
+
+dn: cn=dmt,ou=groups,dc=payara,dc=fish
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: dmt
+uniqueMember: uid=nicolas duminil,ou=people,dc=payara,dc=fish
+uniqueMember: uid=robert smith,ou=people,dc=payara,dc=fish
+uniqueMember: uid=linda devine,ou=people,dc=payara,dc=fish
+ou: user
+
+dn: cn=irt,ou=groups,dc=payara,dc=fish
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: irt
+uniqueMember: uid=leroy franklin,ou=people,dc=payara,dc=fish
+uniqueMember: uid=norman finch,ou=people,dc=payara,dc=fish
+ou: user
+
+dn: cn=irtprim,ou=groups,dc=payara,dc=fish
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: irtprim
+uniqueMember: uid=nicolas duminil,ou=people,dc=payara,dc=fish
+uniqueMember: uid=carlyn posey,ou=people,dc=payara,dc=fish
+ou: user

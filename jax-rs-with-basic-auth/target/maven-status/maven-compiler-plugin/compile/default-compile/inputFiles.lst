@@ -1,0 +1,3 @@
+/home/nicolas/jsr-375/jax-rs-with-basic-auth/src/main/java/fish/payara/tests/rs_352/basic/BasicAuthApp.java
+/home/nicolas/jsr-375/jax-rs-with-basic-auth/src/main/java/fish/payara/tests/rs_352/basic/TestIdentityStore.java
+/home/nicolas/jsr-375/jax-rs-with-basic-auth/src/main/java/fish/payara/tests/rs_352/basic/BasicAuthResource.java

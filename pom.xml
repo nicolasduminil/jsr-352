@@ -4,12 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fish.payara.tests</groupId>
-  <artifactId>jsr-352</artifactId>
+  <artifactId>jsr-375</artifactId>
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>jax-rs-with-basic-auth</module>
     <module>servlet-with-basic-auth</module>
     <module>servlet-with-form-auth</module>
+    <module>servlet-with-ldap-identity-store</module>
     <module>platform</module>
   </modules>
   <packaging>pom</packaging>

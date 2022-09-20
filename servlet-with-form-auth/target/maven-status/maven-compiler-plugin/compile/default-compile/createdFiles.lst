@@ -1,0 +1,5 @@
+fish/payara/tests/TestIdentityStore.class
+fish/payara/tests/LoginErrorServlet.class
+fish/payara/tests/LoginServlet.class
+fish/payara/tests/FormAuthServlet.class
+fish/payara/tests/FormAuthConfig.class

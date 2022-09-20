@@ -1,10 +1,13 @@
 package fish.payara.tests.rs_352.basic;
 
 import jakarta.annotation.security.*;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.bean.*;
 import jakarta.security.enterprise.authentication.mechanism.http.*;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
 
+@RequestScoped
 @Path("/api")
 @Produces("text/plain")
 @BasicAuthenticationMechanismDefinition(realmName = "admin")

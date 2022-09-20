@@ -19,7 +19,7 @@ public class BasicAuthServlet extends HttpServlet
     PrintWriter printWriter = response.getWriter();
     printWriter.append("This is a secured servlet\n");
     Principal principal = request.getUserPrincipal();
-    response.getWriter().append(principal == null ?
+    response.getWriter().append(principal != null ?
       "User " + principal.getName() + " in role admin :" +
         request.isUserInRole("admin") + "\n" : "User principal is null");
   }
