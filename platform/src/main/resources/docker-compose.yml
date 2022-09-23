@@ -1,27 +1,8 @@
 version: '3.6'
 services:
-  apache-ds:
-    container_name: apache-ds
-    hostname: apache-ds
-    image: openmicroscopy/apacheds
-    ports:
-      - 389:10389
-    expose:
-      - 10389
-    volumes:
-      - ../resources/ldif/config.ldif:/bootstrap/conf/config.ldif:ro
-      - ../resources/ldif/users.ldif:/bootstrap/conf/users.ldif:ro
-      - ../resources/scripts:/bootstrap/scripts
-  apache-directory-studio:
-    container_name: apache-directory-studio
-    image: clickbg/apache-directory-studio:latest
-    ports:
-      - 5901:5901
-    expose:
-      - 5901
   payara-micro:
     container_name: payara-micro
-    image: payara/micro:5.2022.3-jdk11
+    image: payara/micro:5.2022.2-jdk11
     ports:
       - 28080:8080
       - 26900:6900
@@ -29,13 +10,10 @@ services:
       - 8080
       - 6900
     volumes:
-      - ../../../../jax-rs-with-basic-auth/target/jax-rs-with-basic-auth.war:/opt/payara/deployments/jax-rs-with-basic-auth.war
-      - ../../../../servlet-with-basic-auth/target/servlet-with-basic-auth.war:/opt/payara/deployments/servlet-with-basic-auth.war
-      - ../../../../servlet-with-form-auth/target/servlet-with-form-auth.war:/opt/payara/deployments/servlet-with-form-auth.war
       - ../../../../servlet-with-ldap-identity-store/target/servlet-with-ldap-identity-store.war:/opt/payara/deployments/servlet-with-ldap-identity-store.war
   payara-full:
     container_name: payara-full
-    image: payara/server-full:5.2022.2
+    image: payara/server-full:5.2022.2-jdk11
     ports:
       - 18080:8080
       - 18081:8081
@@ -47,7 +25,4 @@ services:
       - 4848
       - 9009
     volumes:
-      - ../../../../jax-rs-with-basic-auth/target/jax-rs-with-basic-auth.war:/opt/payara/deployments/jax-rs-with-basic-auth.war
-      - ../../../../servlet-with-basic-auth/target/servlet-with-basic-auth.war:/opt/payara/deployments/servlet-with-basic-auth.war
-      - ../../../../servlet-with-form-auth/target/servlet-with-form-auth.war:/opt/payara/deployments/servlet-with-form-auth.war
       - ../../../../servlet-with-ldap-identity-store/target/servlet-with-ldap-identity-store.war:/opt/payara/deployments/servlet-with-ldap-identity-store.war

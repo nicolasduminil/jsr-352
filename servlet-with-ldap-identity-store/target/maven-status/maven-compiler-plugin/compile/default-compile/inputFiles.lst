@@ -1,3 +1,3 @@
-/home/nicolas/jsr-375/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapIdentityStoreConfig.java
-/home/nicolas/jsr-375/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapIdentityStoreServlet.java
-/home/nicolas/jsr-375/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapSetup.java
+/home/nicolas/jsr-352/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapSetup.java
+/home/nicolas/jsr-352/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapIdentityStoreConfig.java
+/home/nicolas/jsr-352/servlet-with-ldap-identity-store/src/main/java/fish/payara/tests/LdapIdentityStoreServlet.java
