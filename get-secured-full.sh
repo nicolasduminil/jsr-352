@@ -1,0 +1,1 @@
+curl http://localhost:18080/servlet-with-ldap-identity-store/secured -u "admin:passadmin"
