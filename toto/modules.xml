@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jsr-375.iml" filepath="$PROJECT_DIR$/jsr-375.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet-with-ldap-identity-store/servlet-with-ldap-identity-store.iml" filepath="$PROJECT_DIR$/servlet-with-ldap-identity-store/servlet-with-ldap-identity-store.iml" />
+    </modules>
+  </component>
+</project>

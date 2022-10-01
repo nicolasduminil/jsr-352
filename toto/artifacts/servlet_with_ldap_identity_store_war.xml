@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="servlet-with-ldap-identity-store:war">
+    <output-path>$PROJECT_DIR$/servlet-with-ldap-identity-store/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>servlet-with-ldap-identity-store</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="servlet-with-ldap-identity-store.war">
+      <element id="artifact" artifact-name="servlet-with-ldap-identity-store:war exploded" />
+    </root>
+  </artifact>
+</component>
