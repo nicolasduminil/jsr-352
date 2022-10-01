@@ -17,18 +17,13 @@ public class LdapSetup
   {
     try
     {
-      System.out.println ("### LdapSetup.init(): start");
       InMemoryDirectoryServerConfig config = new InMemoryDirectoryServerConfig("dc=fish");
       config.setListenerConfigs(
         new InMemoryListenerConfig("myListener", null, 33389, null, null, null));
-
       directoryServer = new InMemoryDirectoryServer(config);
-
       directoryServer.importFromLDIF(true,
         new LDIFReader(this.getClass().getResourceAsStream("/users.ldif")));
-
       directoryServer.startListening();
-      System.out.println ("### LdapSetup.init(): exit");
     } catch (LDAPException e)
     {
       throw new IllegalStateException(e);
@@ -38,8 +33,6 @@ public class LdapSetup
   @PreDestroy
   public void destroy()
   {
-    System.out.println ("### LdapSetup.destroy(): start");
     directoryServer.shutDown(true);
-    System.out.println ("### LdapSetup.destroy(): exit");
   }
 }
