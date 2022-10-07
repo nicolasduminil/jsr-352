@@ -10,19 +10,7 @@ import jakarta.security.enterprise.identitystore.*;
 @BasicAuthenticationMechanismDefinition(realmName="admin-realm")
 @DatabaseIdentityStoreDefinition(
   dataSourceLookup = "${'java:global/H2'}",
-  callerQuery = "#{'select password from caller where name = ?'}",
-  groupsQuery = "select group_name from caller_groups where caller_name = ?",
-  hashAlgorithm = Pbkdf2PasswordHash.class,
-  priorityExpression = "#{100}",
-  hashAlgorithmParameters = {
-    "Pbkdf2PasswordHash.Iterations=3072",
-    "${jdbcIdentityStoreConfig.algo}"
-  }
+  callerQuery = "select password from caller where name = ?",
+  groupsQuery = "select group_name from caller_groups where caller_name = ?"
 )
-public class JdbcIdentityStoreConfig
-{
-  public String[] getAlgo()
-  {
-    return new String[]{"Pbkdf2PasswordHash.Algorithm=PBKDF2WithHmacSHA512", "Pbkdf2PasswordHash.SaltSizeBytes=64"};
-  }
-}
+public class JdbcIdentityStoreConfig{}
