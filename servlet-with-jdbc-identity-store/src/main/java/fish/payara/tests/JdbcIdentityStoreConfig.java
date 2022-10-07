@@ -1,12 +1,10 @@
 package fish.payara.tests;
 
 import jakarta.enterprise.context.*;
-import jakarta.inject.*;
 import jakarta.security.enterprise.authentication.mechanism.http.*;
 import jakarta.security.enterprise.identitystore.*;
 
 @ApplicationScoped
-@Named
 @BasicAuthenticationMechanismDefinition(realmName="admin-realm")
 @DatabaseIdentityStoreDefinition(
   dataSourceLookup = "${'java:global/H2'}",
