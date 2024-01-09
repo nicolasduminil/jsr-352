@@ -2,7 +2,7 @@ version: '3.6'
 services:
   payara-micro:
     container_name: payara-micro
-    image: payara/micro:5.2022.2-jdk11
+    image: payara/micro:latest
     ports:
       - 28080:8080
       - 26900:6900
@@ -14,7 +14,7 @@ services:
       - ../../../../servlet-with-jdbc-identity-store/target/servlet-with-jdbc-identity-store.war:/opt/payara/deployments/servlet-with-jdbc-identity-store.war
   payara-full:
     container_name: payara-full
-    image: payara/server-full:5.2022.2-jdk11
+    image: payara/server-full:latest
     ports:
       - 18080:8080
       - 18081:8081

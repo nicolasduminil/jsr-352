@@ -24,7 +24,7 @@ public class JdbcIdentityStoreIT
 
   @Container
   private static final GenericContainer<?> payara =
-    new GenericContainer<>("payara/micro:5.2022.3-jdk11")
+    new GenericContainer<>("payara/micro:latest")
       .withExposedPorts(8080)
       .withCopyFileToContainer(MountableFile.forHostPath(
         Paths.get("target/servlet-with-jdbc-identity-store.war")
@@ -88,7 +88,7 @@ public class JdbcIdentityStoreIT
   {
     given()
       .contentType(ContentType.TEXT)
-      .auth().basic("toto", "")
+      .auth().basic("admin", "none")
       .when()
       .get(uri)
       .then()
